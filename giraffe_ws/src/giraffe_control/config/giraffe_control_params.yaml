@@ -5,4 +5,11 @@ giraffe_driver:
     joint_reverse.elbow_actuator_elbow_joint: true
     joint_reverse.wrist_1_actuator_wrist_1_joint: true
     joint_reverse.wrist_2_actuator_wrist_2_joint: true
-    finger_actuator_gripper_joint: false
+    joint_reverse.finger_actuator_gripper_joint: false
+
+    joint_offset.shoulder_pan_actuator_shoulder_pan_joint: 3.223
+    joint_offset.shoulder_lift_actuator_shoulder_lift_joint: 4.6138
+    joint_offset.elbow_actuator_elbow_joint: 1.4083
+    joint_offset.wrist_1_actuator_wrist_1_joint: 3.152
+    joint_offset.wrist_2_actuator_wrist_2_joint: 1.5708
+    joint_offset.finger_actuator_gripper_joint: 4.9532

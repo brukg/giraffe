@@ -32,11 +32,15 @@ class GiraffeDriver(Node):
         self.motors_bus.connect()
 
         self.joint_reverse = {}
+        self.offsets = []
         for motor_name in self.motor_order:
-            param_name = f'joint_reverse.{motor_name}'
-            self.declare_parameter(param_name, False)
-            param_value = self.get_parameter(param_name).get_parameter_value().bool_value
-            self.joint_reverse[motor_name] = param_value
+            self.declare_parameter(f'joint_reverse.{motor_name}', False)
+            joint_reverse_param_value = self.get_parameter(f'joint_reverse.{motor_name}').get_parameter_value().bool_value
+            self.joint_reverse[motor_name] = joint_reverse_param_value
+
+            self.declare_parameter(f'joint_offset.{motor_name}', 0.0)
+            joint_offset_param_value = self.get_parameter(f'joint_offset.{motor_name}').get_parameter_value().double_value
+            self.offsets.append(joint_offset_param_value)
 
         self.get_logger().info(f'Loaded joint_reverse: {self.joint_reverse}')
 
@@ -47,8 +51,7 @@ class GiraffeDriver(Node):
 
         self.timer = self.create_timer(0.01, self.publish_joint_states)
 
-        self.offsets = [3.223, 4.6138, 1.4083, 3.152, 1.5708, 4.9532]
-        self.set_motor_acceleration(5, 50)
+        self.set_motor_acceleration(20, 50)
 
     def joint_state_callback(self, msg: JointState):
         positions = []
