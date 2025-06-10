@@ -173,12 +173,13 @@ def generate_launch_description():
         output="log",
         arguments=["-d", rviz_full_config],
         parameters=[
+            {"use_sim_time": True},
             robot_description_moveit,
             robot_description_semantic,
             robot_description_kinematics,
             ompl_planning_pipeline_config,
             kinematics_yaml,
-        ]
+        ],
     )
     return LaunchDescription([
         env_var,

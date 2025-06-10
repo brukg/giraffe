@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="giraffe">
 
+    <xacro:include filename="$(find giraffe_description)/urdf/giraffe_ros2_control.xacro" />
+    <xacro:giraffe_ros2_control />
+
     <material name="black">
         <color rgba="0.1 0.1 0.1 1"/>
     </material>

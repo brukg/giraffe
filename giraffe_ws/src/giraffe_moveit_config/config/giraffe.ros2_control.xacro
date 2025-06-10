@@ -23,8 +23,8 @@
             </hardware> -->
             <joint name="shoulder_pan_actuator_shoulder_pan_joint">
                 <command_interface name="position">
-                    <param name="min">-1.833</param>
-                    <param name="max">1.833</param>
+                    <param name="min">-1.5708</param>
+                    <param name="max">1.5708</param>
                 </command_interface>
                 <state_interface name="position">
                     <param name="initial_value">0.0</param>
@@ -32,8 +32,8 @@
             </joint>
             <joint name="shoulder_lift_actuator_shoulder_lift_joint">
                 <command_interface name="position">
-                    <param name="min">-0.785</param>
-                    <param name="max">1.644</param>
+                    <param name="min">-0.244246</param>
+                    <param name="max">3.05433</param>
                 </command_interface>
                 <state_interface name="position">
                     <param name="initial_value">0.0</param>
@@ -41,8 +41,8 @@
             </joint>
             <joint name="elbow_actuator_elbow_joint">
                 <command_interface name="position">
-                    <param name="min">-1.536</param>
-                    <param name="max">1.745</param>
+                    <param name="min">-0.436332</param>
+                    <param name="max">3.05433</param>
                 </command_interface>
                 <state_interface name="position">
                     <param name="initial_value">0.0</param>
@@ -59,8 +59,8 @@
             </joint>
             <joint name="wrist_2_actuator_wrist_2_joint">
                 <command_interface name="position">
-                    <param name="min">-3.142</param>
-                    <param name="max">3.142</param>
+                    <param name="min">-1.5708</param>
+                    <param name="max">1.5708</param>
                 </command_interface>
                 <state_interface name="position">
                     <param name="initial_value">0.0</param>
@@ -68,8 +68,8 @@
             </joint>
             <joint name="finger_actuator_gripper_joint">
                 <command_interface name="position">
-                    <param name="min">-0.175</param>
-                    <param name="max">1.571</param>
+                    <param name="min">-3.12414</param>
+                    <param name="max">3.12414</param>
                 </command_interface>
                 <state_interface name="position">
                     <param name="initial_value">0.0</param>
