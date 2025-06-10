@@ -181,11 +181,17 @@ def generate_launch_description():
             on_exit=[rviz_node_full],
         )
     )
+    giraffe_driver_config = os.path.join(
+        get_package_share_directory('giraffe_control'),
+        'config',
+        'giraffe_control_params.yaml',
+    )
 
     giraffe_driver = Node(
         package='giraffe_control',
         executable='giraffe_driver',
         output='screen',
+        parameters=[giraffe_driver_config],
     )
     return LaunchDescription([
         control_node,

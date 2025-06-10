@@ -24,7 +24,7 @@
         <joint name="elbow_actuator_elbow_joint" value="2.9772"/>
         <joint name="shoulder_lift_actuator_shoulder_lift_joint" value="2.9632"/>
         <joint name="shoulder_pan_actuator_shoulder_pan_joint" value="0"/>
-        <joint name="wrist_1_actuator_wrist_1_joint" value="1.5707"/>
+        <joint name="wrist_1_actuator_wrist_1_joint" value="1.5359"/>
         <joint name="wrist_2_actuator_wrist_2_joint" value="0"/>
     </group_state>
     <group_state name="stand" group="arm">
