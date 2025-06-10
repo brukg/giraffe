@@ -10,48 +10,153 @@
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="arm">
-        <joint name="base_link_shoulder_pan_joint"/>
-        <joint name="shoulder_pan_shoulder_lift_joint"/>
-        <joint name="shoulder_lift_elbow_joint"/>
-        <joint name="elbow_wrist_1_joint"/>
-        <joint name="wrist_1_wrist_2_joint"/>
+        <joint name="shoulder_pan_actuator_shoulder_pan_joint"/>
+        <joint name="shoulder_lift_actuator_shoulder_lift_joint"/>
+        <joint name="elbow_actuator_elbow_joint"/>
+        <joint name="wrist_1_actuator_wrist_1_joint"/>
+        <joint name="wrist_2_actuator_wrist_2_joint"/>
     </group>
     <group name="gripper">
-        <joint name="wrist_2_gripper_joint"/>
+        <joint name="finger_actuator_gripper_joint"/>
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
     <group_state name="rest" group="arm">
-        <joint name="base_link_shoulder_pan_joint" value="0"/>
-        <joint name="elbow_wrist_1_joint" value="-1.7976"/>
-        <joint name="shoulder_lift_elbow_joint" value="-1.5358"/>
-        <joint name="shoulder_pan_shoulder_lift_joint" value="-0.7583"/>
-        <joint name="wrist_1_wrist_2_joint" value="-1.5708"/>
+        <joint name="elbow_actuator_elbow_joint" value="2.9772"/>
+        <joint name="shoulder_lift_actuator_shoulder_lift_joint" value="2.9632"/>
+        <joint name="shoulder_pan_actuator_shoulder_pan_joint" value="0"/>
+        <joint name="wrist_1_actuator_wrist_1_joint" value="1.5707"/>
+        <joint name="wrist_2_actuator_wrist_2_joint" value="0"/>
     </group_state>
     <group_state name="stand" group="arm">
-        <joint name="base_link_shoulder_pan_joint" value="0"/>
-        <joint name="elbow_wrist_1_joint" value="0"/>
-        <joint name="shoulder_lift_elbow_joint" value="1.5708"/>
-        <joint name="shoulder_pan_shoulder_lift_joint" value="0"/>
-        <joint name="wrist_1_wrist_2_joint" value="-1.5708"/>
+        <joint name="elbow_actuator_elbow_joint" value="0"/>
+        <joint name="shoulder_lift_actuator_shoulder_lift_joint" value="1.5708"/>
+        <joint name="shoulder_pan_actuator_shoulder_pan_joint" value="0"/>
+        <joint name="wrist_1_actuator_wrist_1_joint" value="0"/>
+        <joint name="wrist_2_actuator_wrist_2_joint" value="0"/>
     </group_state>
     <group_state name="reach" group="arm">
-        <joint name="base_link_shoulder_pan_joint" value="0"/>
-        <joint name="elbow_wrist_1_joint" value="0"/>
-        <joint name="shoulder_lift_elbow_joint" value="1.5708"/>
-        <joint name="shoulder_pan_shoulder_lift_joint" value="1.5708"/>
-        <joint name="wrist_1_wrist_2_joint" value="0"/>
+        <joint name="elbow_actuator_elbow_joint" value="0"/>
+        <joint name="shoulder_lift_actuator_shoulder_lift_joint" value="0"/>
+        <joint name="shoulder_pan_actuator_shoulder_pan_joint" value="0"/>
+        <joint name="wrist_1_actuator_wrist_1_joint" value="0"/>
+        <joint name="wrist_2_actuator_wrist_2_joint" value="0"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-    <end_effector name="gripper" parent_link="wrist_2" group="gripper" parent_group="arm"/>
+    <end_effector name="gripper_ee" parent_link="finger_actuator" group="gripper"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="base_brace_left" link2="base_brace_right" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="base_link" reason="Adjacent"/>
+    <disable_collisions link1="base_brace_left" link2="clamp_base" reason="Adjacent"/>
+    <disable_collisions link1="base_brace_left" link2="elbow_actuator" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="elbow_link" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="retainer" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="servo_driver_mount" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="shoulder_lift" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="shoulder_lift_actuator" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="shoulder_pan" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="shoulder_pan_actuator" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="shoulder_pan_shaft" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="wrist1_link" reason="Never"/>
+    <disable_collisions link1="base_brace_left" link2="wrist_1_actuator" reason="Never"/>
+    <disable_collisions link1="base_brace_right" link2="base_link" reason="Adjacent"/>
+    <disable_collisions link1="base_brace_right" link2="clamp_base" reason="Default"/>
+    <disable_collisions link1="base_brace_right" link2="elbow_actuator" reason="Never"/>
+    <disable_collisions link1="base_brace_right" link2="elbow_link" reason="Never"/>
+    <disable_collisions link1="base_brace_right" link2="retainer" reason="Never"/>
+    <disable_collisions link1="base_brace_right" link2="servo_driver_mount" reason="Never"/>
+    <disable_collisions link1="base_brace_right" link2="shoulder_lift" reason="Never"/>
+    <disable_collisions link1="base_brace_right" link2="shoulder_lift_actuator" reason="Never"/>
+    <disable_collisions link1="base_brace_right" link2="shoulder_pan" reason="Never"/>
+    <disable_collisions link1="base_brace_right" link2="shoulder_pan_actuator" reason="Never"/>
+    <disable_collisions link1="base_brace_right" link2="shoulder_pan_shaft" reason="Never"/>
+    <disable_collisions link1="base_brace_right" link2="wrist_1_actuator" reason="Never"/>
+    <disable_collisions link1="base_link" link2="clamp_base" reason="Default"/>
+    <disable_collisions link1="base_link" link2="elbow_actuator" reason="Never"/>
+    <disable_collisions link1="base_link" link2="retainer" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="servo_driver_mount" reason="Adjacent"/>
     <disable_collisions link1="base_link" link2="shoulder_lift" reason="Never"/>
-    <disable_collisions link1="base_link" link2="shoulder_pan" reason="Adjacent"/>
-    <disable_collisions link1="elbow" link2="gripper" reason="Never"/>
-    <disable_collisions link1="elbow" link2="shoulder_lift" reason="Adjacent"/>
-    <disable_collisions link1="elbow" link2="wrist_1" reason="Adjacent"/>
-    <disable_collisions link1="elbow" link2="wrist_2" reason="Never"/>
-    <disable_collisions link1="gripper" link2="wrist_1" reason="Never"/>
-    <disable_collisions link1="gripper" link2="wrist_2" reason="Adjacent"/>
-    <disable_collisions link1="shoulder_lift" link2="shoulder_pan" reason="Adjacent"/>
-    <disable_collisions link1="wrist_1" link2="wrist_2" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="shoulder_lift_actuator" reason="Never"/>
+    <disable_collisions link1="base_link" link2="shoulder_pan_actuator" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="shoulder_pan_shaft" reason="Default"/>
+    <disable_collisions link1="camera_mount" link2="elbow_actuator" reason="Never"/>
+    <disable_collisions link1="camera_mount" link2="elbow_link" reason="Never"/>
+    <disable_collisions link1="camera_mount" link2="finger_actuator" reason="Never"/>
+    <disable_collisions link1="camera_mount" link2="gripper" reason="Never"/>
+    <disable_collisions link1="camera_mount" link2="wrist1_link" reason="Never"/>
+    <disable_collisions link1="camera_mount" link2="wrist_1_actuator" reason="Never"/>
+    <disable_collisions link1="camera_mount" link2="wrist_2-v9" reason="Adjacent"/>
+    <disable_collisions link1="camera_mount" link2="wrist_2_actuator" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="elbow_actuator" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="elbow_link" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="retainer" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="servo_driver_mount" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="shoulder_lift" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="shoulder_lift_actuator" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="shoulder_pan" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="shoulder_pan_actuator" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="shoulder_pan_shaft" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="wrist1_link" reason="Never"/>
+    <disable_collisions link1="clamp_base" link2="wrist_1_actuator" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="elbow_link" reason="Adjacent"/>
+    <disable_collisions link1="elbow_actuator" link2="finger_actuator" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="gripper" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="retainer" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="servo_driver_mount" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="shoulder_lift" reason="Adjacent"/>
+    <disable_collisions link1="elbow_actuator" link2="shoulder_lift_actuator" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="shoulder_pan" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="shoulder_pan_actuator" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="shoulder_pan_shaft" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="wrist1_link" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="wrist_1_actuator" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="wrist_2-v9" reason="Never"/>
+    <disable_collisions link1="elbow_actuator" link2="wrist_2_actuator" reason="Never"/>
+    <disable_collisions link1="elbow_link" link2="finger_actuator" reason="Never"/>
+    <disable_collisions link1="elbow_link" link2="gripper" reason="Never"/>
+    <disable_collisions link1="elbow_link" link2="retainer" reason="Never"/>
+    <disable_collisions link1="elbow_link" link2="servo_driver_mount" reason="Never"/>
+    <disable_collisions link1="elbow_link" link2="shoulder_lift" reason="Never"/>
+    <disable_collisions link1="elbow_link" link2="shoulder_pan_shaft" reason="Never"/>
+    <disable_collisions link1="elbow_link" link2="wrist1_link" reason="Never"/>
+    <disable_collisions link1="elbow_link" link2="wrist_1_actuator" reason="Adjacent"/>
+    <disable_collisions link1="elbow_link" link2="wrist_2-v9" reason="Never"/>
+    <disable_collisions link1="elbow_link" link2="wrist_2_actuator" reason="Never"/>
+    <disable_collisions link1="finger_actuator" link2="gripper" reason="Adjacent"/>
+    <disable_collisions link1="finger_actuator" link2="wrist1_link" reason="Never"/>
+    <disable_collisions link1="finger_actuator" link2="wrist_1_actuator" reason="Never"/>
+    <disable_collisions link1="finger_actuator" link2="wrist_2-v9" reason="Adjacent"/>
+    <disable_collisions link1="finger_actuator" link2="wrist_2_actuator" reason="Never"/>
+    <disable_collisions link1="gripper" link2="wrist1_link" reason="Never"/>
+    <disable_collisions link1="gripper" link2="wrist_1_actuator" reason="Never"/>
+    <disable_collisions link1="gripper" link2="wrist_2-v9" reason="Never"/>
+    <disable_collisions link1="gripper" link2="wrist_2_actuator" reason="Never"/>
+    <disable_collisions link1="retainer" link2="servo_driver_mount" reason="Never"/>
+    <disable_collisions link1="retainer" link2="shoulder_lift" reason="Never"/>
+    <disable_collisions link1="retainer" link2="shoulder_lift_actuator" reason="Never"/>
+    <disable_collisions link1="retainer" link2="shoulder_pan" reason="Never"/>
+    <disable_collisions link1="retainer" link2="shoulder_pan_actuator" reason="Never"/>
+    <disable_collisions link1="retainer" link2="shoulder_pan_shaft" reason="Never"/>
+    <disable_collisions link1="servo_driver_mount" link2="shoulder_lift_actuator" reason="Never"/>
+    <disable_collisions link1="servo_driver_mount" link2="shoulder_pan" reason="Never"/>
+    <disable_collisions link1="servo_driver_mount" link2="shoulder_pan_actuator" reason="Never"/>
+    <disable_collisions link1="servo_driver_mount" link2="shoulder_pan_shaft" reason="Never"/>
+    <disable_collisions link1="servo_driver_mount" link2="wrist_1_actuator" reason="Never"/>
+    <disable_collisions link1="shoulder_lift" link2="shoulder_lift_actuator" reason="Adjacent"/>
+    <disable_collisions link1="shoulder_lift" link2="shoulder_pan" reason="Default"/>
+    <disable_collisions link1="shoulder_lift" link2="shoulder_pan_actuator" reason="Never"/>
+    <disable_collisions link1="shoulder_lift" link2="shoulder_pan_shaft" reason="Never"/>
+    <disable_collisions link1="shoulder_lift" link2="wrist_1_actuator" reason="Never"/>
+    <disable_collisions link1="shoulder_lift_actuator" link2="shoulder_pan" reason="Adjacent"/>
+    <disable_collisions link1="shoulder_lift_actuator" link2="shoulder_pan_actuator" reason="Never"/>
+    <disable_collisions link1="shoulder_lift_actuator" link2="shoulder_pan_shaft" reason="Never"/>
+    <disable_collisions link1="shoulder_lift_actuator" link2="wrist_1_actuator" reason="Never"/>
+    <disable_collisions link1="shoulder_pan" link2="shoulder_pan_actuator" reason="Adjacent"/>
+    <disable_collisions link1="shoulder_pan" link2="shoulder_pan_shaft" reason="Adjacent"/>
+    <disable_collisions link1="shoulder_pan_actuator" link2="shoulder_pan_shaft" reason="Default"/>
+    <disable_collisions link1="wrist1_link" link2="wrist_1_actuator" reason="Adjacent"/>
+    <disable_collisions link1="wrist1_link" link2="wrist_2-v9" reason="Never"/>
+    <disable_collisions link1="wrist1_link" link2="wrist_2_actuator" reason="Adjacent"/>
+    <disable_collisions link1="wrist_1_actuator" link2="wrist_2-v9" reason="Never"/>
+    <disable_collisions link1="wrist_1_actuator" link2="wrist_2_actuator" reason="Never"/>
+    <disable_collisions link1="wrist_2-v9" link2="wrist_2_actuator" reason="Adjacent"/>
 </robot>

@@ -16,21 +16,21 @@ class GiraffeDriver(Node):
         self.motors_bus = FeetechMotorsBus(
             port="/dev/ttyACM0",
             motors={
-                "base_link_shoulder_pan_joint": (1, "sts3215"),
-                "shoulder_pan_shoulder_lift_joint": (2, "sts3215"),
-                "shoulder_lift_elbow_joint": (3, "sts3215"),
-                "elbow_wrist_1_joint": (4, "sts3215"),
-                "wrist_1_wrist_2_joint": (5, "sts3215"),
-                "wrist_2_gripper_joint": (6, "sts3215"),
+                "shoulder_pan_actuator_shoulder_pan_joint": (1, "sts3215"),
+                "shoulder_lift_actuator_shoulder_lift_joint": (2, "sts3215"),
+                "elbow_actuator_elbow_joint": (3, "sts3215"),
+                "wrist_1_actuator_wrist_1_joint": (4, "sts3215"),
+                "wrist_2_actuator_wrist_2_joint": (5, "sts3215"),
+                "finger_actuator_gripper_joint": (6, "sts3215"),
             },
         )
         self.motor_order = [
-            "base_link_shoulder_pan_joint",
-            "shoulder_pan_shoulder_lift_joint",
-            "shoulder_lift_elbow_joint",
-            "elbow_wrist_1_joint",
-            "wrist_1_wrist_2_joint",
-            "wrist_2_gripper_joint",
+            "shoulder_pan_actuator_shoulder_pan_joint",
+            "shoulder_lift_actuator_shoulder_lift_joint",
+            "elbow_actuator_elbow_joint",
+            "wrist_1_actuator_wrist_1_joint",
+            "wrist_2_actuator_wrist_2_joint",
+            "finger_actuator_gripper_joint",
         ]
         self.motors_bus.connect()
 

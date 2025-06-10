@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>giraffe_description</name>
-  <version>0.0.1</version>
+  <version>1.0.1</version>
   <description>Giraffe Description package</description>
   <maintainer email="carpit680@gmail.com">Arpit Chauhan</maintainer>
   <license>Apache 2.0</license>
@@ -17,7 +17,12 @@
   <depend>ros_gz_bridge</depend>
   <depend>ros_gz_image</depend>
   <depend>ros_gz_sim</depend>
-  <depend>ign-ros2-control  </depend>
+  <depend>ign_ros2_control</depend>
+  <depend>ros_ign_gazebo</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>hardware_interface</depend>
+  <depend>ros2_control</depend>
+  <depend>ros2_controllers</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

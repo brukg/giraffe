@@ -1,3 +1,4 @@
+# @format
 ---
 controller_manager:
   ros__parameters:
@@ -9,53 +10,57 @@ controller_manager:
     gripper_controller:
       type: joint_trajectory_controller/JointTrajectoryController
       joints:
-        - wrist_2_gripper_joint
+        - finger_actuator_gripper_joint
 
     arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
       joints:
-        - base_link_shoulder_pan_joint
-        - shoulder_pan_shoulder_lift_joint
-        - shoulder_lift_elbow_joint
-        - elbow_wrist_1_joint
-        - wrist_1_wrist_2_joint
+        - shoulder_pan_actuator_shoulder_pan_joint
+        - shoulder_lift_actuator_shoulder_lift_joint
+        - elbow_actuator_elbow_joint
+        - wrist_1_actuator_wrist_1_joint
+        - wrist_2_actuator_wrist_2_joint
       publish_rate: 100
       write_op_modes:
-        - base_link_shoulder_pan_joint
-        - shoulder_pan_shoulder_lift_joint
-        - shoulder_lift_elbow_joint
-        - elbow_wrist_1_joint
-        - wrist_1_wrist_2_joint
+        - shoulder_pan_actuator_shoulder_pan_joint
+        - shoulder_lift_actuator_shoulder_lift_joint
+        - elbow_actuator_elbow_joint
+        - wrist_1_actuator_wrist_1_joint
+        - wrist_2_actuator_wrist_2_joint
 
 joint_state_broadcaster:
   ros__parameters:
     joints:
-      - base_link_shoulder_pan_joint
-      - shoulder_pan_shoulder_lift_joint
-      - shoulder_lift_elbow_joint
-      - elbow_wrist_1_joint
-      - wrist_1_wrist_2_joint
-      - wrist_2_gripper_joint
+      - shoulder_pan_actuator_shoulder_pan_joint
+      - shoulder_lift_actuator_shoulder_lift_joint
+      - elbow_actuator_elbow_joint
+      - wrist_1_actuator_wrist_1_joint
+      - wrist_2_actuator_wrist_2_joint
+      - finger_actuator_gripper_joint
     publish_rate: 100
 
 arm_controller:
   ros__parameters:
     joints:
-      - base_link_shoulder_pan_joint
-      - shoulder_pan_shoulder_lift_joint
-      - shoulder_lift_elbow_joint
-      - elbow_wrist_1_joint
-      - wrist_1_wrist_2_joint
+      - shoulder_pan_actuator_shoulder_pan_joint
+      - shoulder_lift_actuator_shoulder_lift_joint
+      - elbow_actuator_elbow_joint
+      - wrist_1_actuator_wrist_1_joint
+      - wrist_2_actuator_wrist_2_joint
     command_interfaces:
       - position
     state_interfaces:
       - position
     gains:
-      base_link_shoulder_pan_joint: {p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0}
-      shoulder_pan_shoulder_lift_joint: {p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0}
-      shoulder_lift_elbow_joint: {p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0}
-      elbow_wrist_1_joint: {p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0}
-      wrist_1_wrist_2_joint: {p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0}
+      shoulder_pan_actuator_shoulder_pan_joint:
+        { p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0 }
+      shoulder_lift_actuator_shoulder_lift_joint:
+        { p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0 }
+      elbow_actuator_elbow_joint: { p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0 }
+      wrist_1_actuator_wrist_1_joint:
+        { p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0 }
+      wrist_2_actuator_wrist_2_joint:
+        { p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0 }
     state_publish_rate: 100.0
     state_publish_topic: controller_state
     action_monitor_rate: 50.0
@@ -63,23 +68,23 @@ arm_controller:
     allow_nonzero_velocity_at_trajectory_end: false
     constraints:
       stopped_velocity_tolerance: 0.2
-      base_link_shoulder_pan_joint: {trajectory: 0.4, goal: 0.1}
-      shoulder_pan_shoulder_lift_joint: {trajectory: 0.4, goal: 0.1}
-      shoulder_lift_elbow_joint: {trajectory: 0.4, goal: 0.1}
-      elbow_wrist_1_joint: {trajectory: 0.4, goal: 0.1}
-      wrist_1_wrist_2_joint: {trajectory: 0.4, goal: 0.1}
+      shoulder_pan_actuator_shoulder_pan_joint: { trajectory: 0.4, goal: 0.1 }
+      shoulder_lift_actuator_shoulder_lift_joint: { trajectory: 0.4, goal: 0.1 }
+      elbow_actuator_elbow_joint: { trajectory: 0.4, goal: 0.1 }
+      wrist_1_actuator_wrist_1_joint: { trajectory: 0.4, goal: 0.1 }
+      wrist_2_actuator_wrist_2_joint: { trajectory: 0.4, goal: 0.1 }
 
 gripper_controller:
   ros__parameters:
     joints:
-      - wrist_2_gripper_joint
+      - finger_actuator_gripper_joint
     command_interfaces:
       - position
     state_interfaces:
       - position
 
     gains:
-      wrist_2_gripper_joint: {p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0}
+      finger_actuator_gripper_joint: { p: 100.0, i: 0.0, d: 0.01, i_clamp: 0.0 }
     state_publish_topic: controller_state
     open_loop_control: true
     state_publish_rate: 100.0
@@ -89,4 +94,4 @@ gripper_controller:
 
     constraints:
       stopped_velocity_tolerance: 0.2
-      wrist_2_gripper_joint: {trajectory: 0.4, goal: 0.4}
+      finger_actuator_gripper_joint: { trajectory: 0.4, goal: 0.4 }

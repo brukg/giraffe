@@ -1,3 +1,5 @@
+# @format
+
 # joint_limits.yaml allows the dynamics properties specified in the URDF to be overwritten or augmented as needed
 
 # For beginners, we downscale velocity and acceleration limits.
@@ -8,32 +10,32 @@ default_acceleration_scaling_factor: 1.0
 # Specific joint properties can be changed with the keys [max_position, min_position, max_velocity, max_acceleration]
 # Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
 joint_limits:
-  base_link_shoulder_pan_joint:
+  shoulder_pan_actuator_shoulder_pan_joint:
     has_velocity_limits: true
     max_velocity: 1.0
     has_acceleration_limits: true
     max_acceleration: 1.0
-  elbow_wrist_1_joint:
+  wrist_1_actuator_wrist_1_joint:
     has_velocity_limits: true
     max_velocity: 1.0
     has_acceleration_limits: true
     max_acceleration: 1.0
-  shoulder_lift_elbow_joint:
+  elbow_actuator_elbow_joint:
     has_velocity_limits: true
     max_velocity: 1.0
     has_acceleration_limits: true
     max_acceleration: 1.0
-  shoulder_pan_shoulder_lift_joint:
+  shoulder_lift_actuator_shoulder_lift_joint:
     has_velocity_limits: true
     max_velocity: 1.0
     has_acceleration_limits: true
     max_acceleration: 1.0
-  wrist_1_wrist_2_joint:
+  wrist_2_actuator_wrist_2_joint:
     has_velocity_limits: true
     max_velocity: 1.0
     has_acceleration_limits: true
     max_acceleration: 1.0
-  wrist_2_gripper_joint:
+  finger_actuator_gripper_joint:
     has_velocity_limits: true
     max_velocity: 1.0
     has_acceleration_limits: true

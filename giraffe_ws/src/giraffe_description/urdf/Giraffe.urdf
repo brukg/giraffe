@@ -1,19 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="giraffe">
-
-    <xacro:include filename="$(find giraffe_description)/urdf/giraffe_ros2_control.xacro" />
-    <xacro:giraffe_ros2_control />
-
-    <material name="black">
-        <color rgba="0.1 0.1 0.1 1"/>
-    </material>
-
-    <material name="white">
-        <color rgba="0.9 0.9 0.9 1"/>
-    </material>
-
-    <link name="world"></link>
-
+<robot name="Giraffe">
     <link name="shoulder_pan_shaft">
         <inertial>
             <origin xyz="-1.3411175948422894e-05 -1.3413911005231149e-05 0.0054896999786519405" rpy="-1.9721522630525295e-31 -0.0 -5.3705059693060124e-36" />
@@ -394,13 +380,6 @@
             </geometry>
         </collision>
     </link>
-
-    <joint name="world_joint" type="fixed">
-        <parent link="world" />
-        <child link="base_link" />
-        <origin xyz="0.0 0.0 0.0" rpy="0 0 1.5708" />
-    </joint>
-
     <joint name="base_link_rigid_1" type="fixed">
         <origin xyz="-0.03144487344881935 -0.026904850271700562 -0.0005999967551818264" rpy="2.3561959828499686 -1.5673407528956278 -0.7861553249904304" />
         <parent link="base_link" />
@@ -508,137 +487,4 @@
         <parent link="wrist_2-v9" />
         <child link="camera_mount" />
     </joint>
-    
-    <ros2_control name="GiraffeSystem" type="system">
-        <hardware>
-            <plugin>giraffe_controller/GiraffeInterface</plugin>
-        </hardware>
-
-        <joint name="shoulder_pan_actuator_shoulder_pan_joint">
-            <command_interface name="position">
-                <param name="min">-1.833</param>
-                <param name="max">1.833</param>
-            </command_interface>
-            <state_interface name="position">
-                <param name="initial_value">0.0</param>
-            </state_interface>
-        </joint>
-
-        <joint name="shoulder_lift_actuator_shoulder_lift_joint">
-            <command_interface name="position">
-                <param name="min">-0.785</param>
-                <param name="max">1.644</param>
-            </command_interface>
-            <state_interface name="position">
-                <param name="initial_value">0.0</param>
-            </state_interface>
-        </joint>
-
-        <joint name="elbow_actuator_elbow_joint">
-            <command_interface name="position">
-                <param name="min">-1.536</param>
-                <param name="max">1.745</param>
-            </command_interface>
-            <state_interface name="position">
-                <param name="initial_value">0.0</param>
-            </state_interface>
-        </joint>
-
-        <joint name="wrist_1_actuator_wrist_1_joint">
-            <command_interface name="position">
-                <param name="min">-3.368</param>
-                <param name="max">0.262</param>
-            </command_interface>
-            <state_interface name="position">
-                <param name="initial_value">0.0</param>
-            </state_interface>
-        </joint>
-
-        <joint name="wrist_2_actuator_wrist_2_joint">
-            <command_interface name="position">
-                <param name="min">-3.142</param>
-                <param name="max">3.142</param>
-            </command_interface>
-            <state_interface name="position">
-                <param name="initial_value">0.0</param>
-            </state_interface>
-        </joint>
-
-        <joint name="finger_actuator_gripper_joint">
-            <command_interface name="position">
-                <param name="min">-0.175</param>
-                <param name="max">1.571</param>
-            </command_interface>
-            <state_interface name="position">
-                <param name="initial_value">0.0</param>
-            </state_interface>
-        </joint>
-    </ros2_control>
-
-    <transmission name="shoulder_pan_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="shoulder_pan_actuator_shoulder_pan_joint">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="shoulder_pan_motor">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-
-    <transmission name="shoulder_lift_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="shoulder_lift_actuator_shoulder_lift_joint">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="shoulder_lift_motor">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-
-    <transmission name="elbow_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="elbow_actuator_elbow_joint">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="elbow_motor">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-
-    <transmission name="wrist_1_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="wrist_1_actuator_wrist_1_joint">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="wrist_1_motor">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-
-    <transmission name="wrist_2_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="wrist_2_actuator_wrist_2_joint">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="wrist_2_motor">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-
-    <transmission name="gripper_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="finger_actuator_gripper_joint">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="gripper_motor">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-
 </robot>
