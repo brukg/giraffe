@@ -240,23 +240,20 @@ This package contains URDF for _giraffe_ robotic manipulator along with ros2 con
   ros2 launch giraffe_description moveit_sim.launch.py
   ```
 
-- _moveit_hardware.launch.py_: This launch file configures and launches the giraffe robot simulation, integrating Gazebo, MoveIt! 2, and a hardware interface for motion control. Key features:
+- moveit_interface.launch.py_: This launch file configures and launches the giraffe robot hardware, MoveIt! 2, and a hardware interface for motion control. Key features:
 
-  1. Gazebo Simulation:
-      - Spawns the giraffe robot in Gazebo with URDF and robot controllers.
-      - Initializes ros2_control and joint broadcasters for simulation.
-  2. MoveIt! 2 Motion Planning:
+  1. MoveIt! 2 Motion Planning:
       - Loads MoveIt! 2 configurations (SRDF, kinematics, and OMPL planning).
       - Starts the move_group node for motion planning and trajectory execution.
-  3. RViz Visualization:
+  2. RViz Visualization:
       - Displays the robot's state and motion planning visualization using a preconfigured RViz setup.
-  4. Hardware Interface:
+  3. Hardware Interface:
       - Includes a node for the giraffe robot's hardware interface for integration with controllers.
 
   _Usage_:
 
   ```bash
-  ros2 launch giraffe_description moveit_hardware.launch.py
+  ros2 launch giraffe_description moveit_interface.launch.py
   ```
 
 ### giraffe_moveit_config
