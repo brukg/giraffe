@@ -118,7 +118,6 @@ Print one of each part found in `/CAD/STL/common/` and `/CAD/STL/follower/` or `
 
 </div>
 
-
 #### 4. Take Down
 
 - After the print is done, use the putty knife to scrape the the parts off the print bed.
@@ -166,6 +165,9 @@ Use the configurator script in `scripts/` directory
 ```bash
 python3 scripts/st_configurator.py
 ```
+
+---
+
 ## Optional ROS2 Docker Development Environment Setup
 
 Follow the instructions given here to set up a ROS2 Docker development environment: [ros2_docker_env](https://github.com/carpit680/ros2_docker_env)
