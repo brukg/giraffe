@@ -78,7 +78,7 @@ Order the off the shelf parts for the Leader and Follower arms using the Bill of
 | Micro USB B cable 1 metre | 1 | ₹35.00 | [Robocraze](https://robocraze.com/products/usb-to-micro-usb-cable?variant=40192442007705&country=IN¤cy=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_source=google&utm_medium=cpc&utm_campaign=BL+%7C+Pmax+%7C+Feed+Only+%7C+Top+40+Revenue+%7C+09%2F06&utm_source=googleads&utm_medium=ppc&utm_campaign=21373062889&utm_content=_&utm_term=&campaignid=21373062889&adgroupid=&campaign=21373062889&gad_source=1&gclid=Cj0KCQjw2N2_BhCAARIsAK4pEkVDPtNGpsZV-ffHMIzdULpzGFAPsKl39PljBhO8jgnAKcCk_V_ssa4aAiHVEALw_wcB) |
 | M3 Nut | 4 | ₹1.00 | [Only Screws](https://onlyscrews.in/products/m3-nut-ss-304) |
 | 2 Inch metal C clamp  | 1 | ₹269.00 | [Amazon.in](https://www.amazon.in/Eastman-E-2036-C-CLAMP-INCH-2036/dp/B09F9F1KTF?th=1) |
-| Total | --- | ₹1932.33 | --- |
+| Total | --- | ₹1,932.33 | --- |
 
 ### Printing The Parts
 
