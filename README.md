@@ -52,33 +52,23 @@ Order the off the shelf parts for the Leader and Follower arms using the Bill of
 | Serial Bus Servo Driver Board | 1 | ₹508.86 | [Sharvi Electronics](https://sharvielectronics.com/product/serial-bus-servo-driver-board-integrates-servo-power-supply-and-control-circuit-applicable-for-st-sc-series-serial-bus-servos-waveshare/) |
 | 2 Inch metal C clamp  | 1 | ₹269.00 | [Amazon.in](https://www.amazon.in/Eastman-E-2036-C-CLAMP-INCH-2036/dp/B09F9F1KTF?th=1) |
 | Type C USB Cable (1 metre) | 1 | ₹54.00 | [Robocraze](https://robocraze.com/products/type-c-usb-cable-1-metre?variant=40193636303001&country=IN¤cy=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&campaignid=21590308288&adgroupid=&keyword=&device=c&gad_source=1&gclid=Cj0KCQjwqIm_BhDnARIsAKBYcmuNnQNnYDXqS_BIkwa01enR4i1DLvQ--OMAT0BC9CL8HVrOcXE4uf0aAkGMEALw_wcB) |
-| 1kg 2025 PLA PRO+ | 0.25 | ₹849.00 | [Amazon.in](https://www.amazon.in/dp/B06Y35GHT8?ref=ppx_yo2ov_dt_b_fed_asin_title) |
 | 12V 5A 60W Power Supply with 5.5mm DC Plug | 1 | ₹403.00 | [Robu.in](https://robu.in/product/orange-ac-100-240v-to-dc-12v-5a-60w-power-adapter/) |
-| M3 Nut | 4 | ₹1.00 | [Only Screws](https://onlyscrews.in/products/m3-nut-ss-304) |
-| M3x16 Allen CSK Bolt | 4 | ₹2.00 | [Only Screws](https://onlyscrews.in/products/hex-allen-csk-m3-x-16-screw-pack-of-20) |
-| Total | --- | ₹13,159.05 | --- |
+| Total | --- | ₹12,935 | --- |
 
 #### Leader Arm BOM
 
 | Item Name | Quantity Per Arm | Unit Cost (incl GST) | Buy (India) |
 | --- | --- | --- | --- |
-| 2 pin JST-XH 2.54 male | 7 | ₹0.84 | [Ktron](https://www.ktron.in/my-account/view-order/127997/) |
-| 2 pin JST-XH 2.54 female | 7 | ₹0.28 | [Ktron](https://www.ktron.in/my-account/view-order/127997/) |
-| JST-XH 2.54 crimp Terminal | 14 | ₹0.84 | [Ktron](https://www.ktron.in/my-account/view-order/127997/) |
-| Red 30 AWG wire 1m | 5 | ₹5.00 | [Robu.in](https://robu.in/product/high-quality-ultra-flexible-30awg-silicone-wire-1000-m-white/?gad_source=1&gclid=Cj0KCQjwqv2_BhC0ARIsAFb5Ac9y5QrmGJUhl2DLI0UtK0kKlJsocsbkqFMvQ10A4MQIIVxtX2W-G8MaApTbEALw_wcB) |
+| 30 AWG wire 1m | 5 | ₹5.00 | [Robu.in](https://robu.in/product/high-quality-ultra-flexible-30awg-silicone-wire-1000-m-white/?gad_source=1&gclid=Cj0KCQjwqv2_BhC0ARIsAFb5Ac9y5QrmGJUhl2DLI0UtK0kKlJsocsbkqFMvQ10A4MQIIVxtX2W-G8MaApTbEALw_wcB) |
 | Perf Board | 0.25 | ₹142.00 | [Robu.in](https://robu.in/product/12-x-18-cm-universal-pcb-prototype-board-single-sided-2-54mm-hole-pitch/) |
-| ESP8266 | 1 | ₹182.00 | [Robu.in](https://robu.in/product/d1-mini-v2-nodemcu-4m-bytes-lua-wifi-internet-of-things-development-board-based-esp8266/?gad_source=1&gad_campaignid=21296336107&gclid=Cj0KCQjw0qTCBhCmARIsAAj8C4YbD580afd7JTV_2vWp4SIUCKdXW59jYu-Wk0YEZ4AWOdSpvBoFxyAaAvbREALw_wcB) |
-| TCA9548A  I2C Mux | 1 | ₹81.21 | [Zbotic](https://zbotic.in/product/cjmcu-tca9548a-i2c-8-channel-multiple-extensions-development-board/?gad_source=1&gclid=Cj0KCQjw2N2_BhCAARIsAK4pEkWZaUEnn1AonuzN7zrrJuBwX3K-bko7J3kNjnqQfr_lUvTFPkCQnpgaAuj4EALw_wcB) |
-| Female pin headers | 2 | ₹18.40 | [Robu.in](https://robu.in/product/2-54mm-1x40-pin-female-single-row-header-strip-pack-of-10/) |
+| Wemos D1 mini v2 | 1 | ₹182.00 | [Robu.in](https://robu.in/product/d1-mini-v2-nodemcu-4m-bytes-lua-wifi-internet-of-things-development-board-based-esp8266/?gad_source=1&gad_campaignid=21296336107&gclid=Cj0KCQjw0qTCBhCmARIsAAj8C4YbD580afd7JTV_2vWp4SIUCKdXW59jYu-Wk0YEZ4AWOdSpvBoFxyAaAvbREALw_wcB) |
+| TCA9548A I2C Mux | 1 | ₹81.21 | [Zbotic](https://zbotic.in/product/cjmcu-tca9548a-i2c-8-channel-multiple-extensions-development-board/?gad_source=1&gclid=Cj0KCQjw2N2_BhCAARIsAK4pEkWZaUEnn1AonuzN7zrrJuBwX3K-bko7J3kNjnqQfr_lUvTFPkCQnpgaAuj4EALw_wcB) |
 | AS5600 Encoder | 6 | ₹130.80 | [Quartz Components](https://quartzcomponents.com/products/as5600-magnetic-angle-encoder-sensor-module?variant=44904504492266) |
-| PLA PRO+ 3D printing filament | 0.25 | ₹849.00 | [Amazon.in](https://www.amazon.in/dp/B06Y35GHT8?ref=ppx_yo2ov_dt_b_fed_asin_title) |
 | M3 x 6 philips head bolts | 48 | ₹3.00 | [Only Screws](https://onlyscrews.in/products/hex-allen-socket-head-m3-x-6-screw-pack-of-20?srsltid=AfmBOor482XuHLUrpOdCDrG-Go1E4GZqYg0EmdTY6sNbX8fbGjGZCeez) |
 | M2.2 x 9.5 philips head self tapping screws | 2 | ₹47.20 | [Robotics DNA](https://roboticsdna.in/product/2-2mm-dia-9-5mm-ss-self-tapping-screw-25-pieces/?src=google&kwd=&adgroup={adgroup}&device=c&campaign={campaign}&adgroup={adgroup}&keyword=&matchtype=&gad_source=1&gad_campaignid=22411741198&gclid=Cj0KCQjw0qTCBhCmARIsAAj8C4YcSURfn4xIPfqC6ZU851A3e9wjm49ESc_jJkYKZkwkTw2ZjKHKA_AaAkHNEALw_wcB) |
-| M3x16 Allen CSK Bolt | 4 | ₹2.20 | [Only Screws](https://onlyscrews.in/products/hex-allen-csk-m3-x-16-screw-pack-of-20) |
 | Micro USB B cable 1 metre | 1 | ₹35.00 | [Robocraze](https://robocraze.com/products/usb-to-micro-usb-cable?variant=40192442007705&country=IN¤cy=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_source=google&utm_medium=cpc&utm_campaign=BL+%7C+Pmax+%7C+Feed+Only+%7C+Top+40+Revenue+%7C+09%2F06&utm_source=googleads&utm_medium=ppc&utm_campaign=21373062889&utm_content=_&utm_term=&campaignid=21373062889&adgroupid=&campaign=21373062889&gad_source=1&gclid=Cj0KCQjw2N2_BhCAARIsAK4pEkVDPtNGpsZV-ffHMIzdULpzGFAPsKl39PljBhO8jgnAKcCk_V_ssa4aAiHVEALw_wcB) |
-| M3 Nut | 4 | ₹1.00 | [Only Screws](https://onlyscrews.in/products/m3-nut-ss-304) |
 | 2 Inch metal C clamp  | 1 | ₹269.00 | [Amazon.in](https://www.amazon.in/Eastman-E-2036-C-CLAMP-INCH-2036/dp/B09F9F1KTF?th=1) |
-| Total | --- | ₹1,932.33 | --- |
+| Total | --- | ₹1,651 | --- |
 
 ### Printing The Parts
 
