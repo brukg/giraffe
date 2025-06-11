@@ -36,7 +36,9 @@ We redesigned the arm around cost-efficient Waveshare servos replacing Dynamixel
 
 ## Assembly Instructions
 
-![Image of Giraffe Rendered](assets/giraffe_follower.png)
+| Giraffe Follower        | Giraffe Leader         |
+|----------------------------------|---------------------------------|
+| ![Giraffe Follower](assets/giraffe_follower.png) | ![Giraffe Leader](assets/giraffe_leader.png) |
 
 ### Sourcing Parts
 
@@ -84,19 +86,34 @@ When choosing a printer, keep the following recommended specifications in mind. 
 
 #### 3. Print The Parts
 
-Print one of each part found in `CAD/STL`
+Print one of each part found in `/CAD/STL/common/` and `/CAD/STL/follower/` or `/CAD/STL/leader/` directories, depending on whether you are building the follower or leader arm. The files are organized as follows:
 
-> List of Parts:
+> **List of Printed Parts:**
 >
-> - base_retainer
-> - base
-> - driver_mount
-> - elbow
-> - gripper
-> - shoulder_lift
-> - shoulder_pan
-> - wrist_1
-> - wrist_2
+> - _Common for Follower and Leader Arm:_
+>   - base
+>   - servo_driver_mount
+>   - shoulder_pan
+>   - soulder_pan_retainer
+>   - shoulder_pan_pin
+>   - shoulder_lift
+>   - elbow
+>   - wrist_1
+>
+> - _Follower Arm Only:_
+>   - follower_base_retainer_left
+>   - follower_base_retainer_right
+>   - follower_clamp_base
+>   - follower_wrist_2
+>   - follower_gripper_finger
+>
+> - _Leader Arm Only:_
+>   - as5600_servo_1
+>   - as5600_servo_2
+>   - leader_clamp_base
+>   - leader_wrist_2
+>   - leader_handle
+>   - leader_gripper_finger
 
 #### 4. Take Down
 
@@ -107,9 +124,9 @@ Print one of each part found in `CAD/STL`
 
 Construct the arms using this Assembly [Video](https://www.youtube.com/watch?v=8nQIg9BwwTk&t=8m20s) (Note: Follow the assembly instructions provided for Follower Arm starting at 08:20 of the video). After you assemble the arms from the video, power the arm using the 12V power supply. In addition, plug the arm into your computer using a USB-C cable.
 
-The Arm, after assembly, would look something like this:
+The assembled arms would look something like this:
 
-![Image of Giraffe](assets/giraffe.png)
+![Image of Giraffe leader and follower arms](assets/giraffe.png)
 
 ---
 
