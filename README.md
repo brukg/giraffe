@@ -88,16 +88,20 @@ When choosing a printer, keep the following recommended specifications in mind. 
 
 Print one of each part found in `/CAD/STL/common/` and `/CAD/STL/follower/` or `/CAD/STL/leader/` directories, depending on whether you are building the follower or leader arm. The files are organized as follows:
 
-| Common for Follower & Leader | Follower Arm Only                | Leader Arm Only                      |
-|------------------------------|----------------------------------|--------------------------------------|
-| base                         | follower_base_retainer_left      | as5600_servo_1                       |
-| servo_driver_mount           | follower_base_retainer_right     | as5600_servo_2                       |
-| shoulder_pan                 | follower_clamp_base              | leader_clamp_base                    |
-| soulder_pan_retainer         | follower_wrist_2                 | leader_wrist_2                       |
-| shoulder_pan_pin             | follower_gripper_finger          | leader_handle                        |
-| shoulder_lift                |                                  | leader_gripper_finger                |
-| elbow                        |                                  |                                      |
-| wrist_1                      |                                  |                                      |
+<div align="center">
+
+| Common for Follower & Leader | Follower Arm Only           | Leader Arm Only             |
+|:-----------------------------|:----------------------------|:----------------------------|
+| base                         | follower_base_retainer_left | as5600_servo_1              |
+| servo_driver_mount           | follower_base_retainer_right| as5600_servo_2              |
+| shoulder_pan                 | follower_clamp_base         | leader_clamp_base           |
+| soulder_pan_retainer         | follower_wrist_2            | leader_wrist_2              |
+| shoulder_pan_pin             | follower_gripper_finger     | leader_handle               |
+| shoulder_lift                |                             | leader_gripper_finger       |
+| elbow                        |                             |                             |
+| wrist_1                      |                             |                             |
+
+</div>
 
 
 #### 4. Take Down
