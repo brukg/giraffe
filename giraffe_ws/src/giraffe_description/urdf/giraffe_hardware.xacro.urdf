@@ -18,6 +18,7 @@
             <inertia ixx="1.508470397504038e-07" iyy="1.5084704203403253e-07" izz="1.764732859365638e-08" ixy="-7.952810836861831e-13" iyz="3.254708899299518e-10" ixz="3.254718557282288e-10" />
         </inertial>
         <visual name="shoulder_pan_shaft_visual">
+            <material name="white"/>
             <origin xyz="0.008106267583602906 7.002947095541501e-05 -0.02063014414641271" rpy="-0.002445313989558981 -0.002441606509518308 1.5715549810166236" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/shoulder_pan_shaft.stl" scale="0.001 0.001 0.001" />
@@ -37,6 +38,7 @@
             <inertia ixx="4.219114154821488e-05" iyy="9.359453727871812e-05" izz="8.835342491978443e-05" ixy="1.930143741355336e-05" iyz="-1.9417528770925102e-06" ixz="3.942795930739147e-06" />
         </inertial>
         <visual name="wrist_2-v9_visual">
+            <material name="white"/>
             <origin xyz="0.023414439458437214 0.020117330367280157 -0.22047336491261565" rpy="1.572487094217567 -0.002449415475925335 -1.5732319621207191" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/wrist_2-v9.stl" scale="0.001 0.001 0.001" />
@@ -56,6 +58,7 @@
             <inertia ixx="0.00023298951044914851" iyy="0.00012068001089149383" izz="0.00027439217189817943" ixy="-5.889811079122726e-06" iyz="2.625286492895089e-06" ixz="1.655974215710106e-06" />
         </inertial>
         <visual name="shoulder_pan_visual">
+            <material name="white"/>
             <origin xyz="0.008145481485789195 -0.036680050862643414 -0.00010924336912160104" rpy="0.2988167777806587 1.5682395715403312 1.8720574923944682" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/shoulder_pan.stl" scale="0.001 0.001 0.001" />
@@ -75,6 +78,7 @@
             <inertia ixx="7.510717631507427e-06" iyy="1.4109748195237096e-05" izz="1.2037071210307311e-05" ixy="4.28853255028471e-09" iyz="4.519234291476546e-09" ixz="7.757672512385405e-08" />
         </inertial>
         <visual name="shoulder_pan_actuator_visual">
+            <material name="black"/>
             <origin xyz="-0.003476575940481408 0.010236961562351949 0.006433551777754545" rpy="-1.5683547129853628 0.002445306700740462 -0.0007526837211772323" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/shoulder_pan_actuator.stl" scale="0.001 0.001 0.001" />
@@ -94,6 +98,7 @@
             <inertia ixx="3.1489089774998236e-05" iyy="9.399670503263228e-06" izz="2.2997824836348166e-05" ixy="-1.2115063144233152e-07" iyz="-3.296677982152477e-08" ixz="1.7351321816388934e-08" />
         </inertial>
         <visual name="servo_driver_mount_visual">
+            <material name="white"/>
             <origin xyz="-0.04572865734749307 0.01766661304182639 0.0001444354796560976" rpy="-2.8427758749736154 -1.5682395715395063 -1.8720574932325007" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/servo_driver_mount.stl" scale="0.001 0.001 0.001" />
@@ -113,6 +118,7 @@
             <inertia ixx="0.000590727637349527" iyy="0.0006369098056043479" izz="0.0005080336997379469" ixy="-9.27362070721634e-09" iyz="0.00013734127707619903" ixz="5.490385866527081e-08" />
         </inertial>
         <visual name="base_link_visual">
+            <material name="white"/>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
@@ -132,6 +138,7 @@
             <inertia ixx="0.0002171631181174484" iyy="0.0004441812148394159" izz="0.0002723775689569323" ixy="-5.544408396149226e-07" iyz="7.272937480617213e-07" ixz="1.0749024222711457e-08" />
         </inertial>
         <visual name="clamp_base_visual">
+            <material name="white"/>
             <origin xyz="0.029271940259570767 -0.010428927981251225 -0.04103029366675298" rpy="-1.573241641255744 -0.0007586519603592202 0.0024434618887085777" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/clamp_base.stl" scale="0.001 0.001 0.001" />
@@ -151,6 +158,7 @@
             <inertia ixx="1.1757863533268994e-06" iyy="6.899007849367126e-07" izz="1.1741671939918773e-06" ixy="-1.6661270968014766e-09" iyz="-6.409613704686636e-10" ixz="1.8940762405703916e-07" />
         </inertial>
         <visual name="retainer_visual">
+            <material name="white"/>
             <origin xyz="-0.01706466684754026 -0.00484107860305972 -0.0077905820030200745" rpy="1.5708000297742428 -0.7861538278471825 3.138134460301354" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/retainer.stl" scale="0.001 0.001 0.001" />
@@ -170,6 +178,7 @@
             <inertia ixx="1.7575579696464366e-07" iyy="1.9353032192789332e-07" izz="1.8909639241128452e-08" ixy="4.3109987277033734e-11" iyz="1.3153338960048517e-10" ixz="3.8357050513981144e-10" />
         </inertial>
         <visual name="base_brace_right_visual">
+            <material name="white"/>
             <origin xyz="-0.010547877288095388 -0.03363960101765047 0.026853826915744783" rpy="1.5683528660750305 -1.9067927307474117e-15 1.5683528658422707" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/base_brace_right.stl" scale="0.001 0.001 0.001" />
@@ -189,6 +198,7 @@
             <inertia ixx="1.7575578067107638e-07" iyy="1.9353031394358542e-07" izz="1.8909630586869798e-08" ixy="-4.3103493338642184e-11" iyz="1.315562136208849e-10" ixz="-3.8356764649547007e-10" />
         </inertial>
         <visual name="base_brace_left_visual">
+            <material name="white"/>
             <origin xyz="-0.01038358793482051 -0.03364840729805454 -0.026904873832930984" rpy="-1.5732397875157964 3.1590454487285652e-15 -1.5683528658422705" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/base_brace_left.stl" scale="0.001 0.001 0.001" />
@@ -208,6 +218,7 @@
             <inertia ixx="0.00020388598817040168" iyy="0.0007848067696642401" izz="0.0006143133720941499" ixy="-3.7020086383176126e-05" iyz="-4.587642090369414e-07" ixz="6.362048226301574e-07" />
         </inertial>
         <visual name="shoulder_lift_visual">
+            <material name="white"/>
             <origin xyz="0.05514712621137525 0.012819765822937246 -0.018735277569727923" rpy="0.2981333907791921 -1.568233870642598 1.2702245251151756" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/shoulder_lift.stl" scale="0.001 0.001 0.001" />
@@ -227,6 +238,7 @@
             <inertia ixx="0.0001663302872710049" iyy="0.0006508896112372225" izz="0.0005733499722456147" ixy="-2.335279603469903e-05" iyz="8.12282182755389e-10" ixz="-1.5635010082814134e-06" />
         </inertial>
         <visual name="elbow_link_visual">
+            <material name="white"/>
             <origin xyz="0.07316568671895611 -0.008138839143132941 -0.008134926004255659" rpy="3.139901877061385 -0.002445307403232719 1.5732397936467268" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/elbow_link.stl" scale="0.001 0.001 0.001" />
@@ -246,6 +258,7 @@
             <inertia ixx="9.039740695044056e-05" iyy="0.00010376772447421613" izz="3.0502378974088216e-05" ixy="-4.985221391468416e-08" iyz="1.854281439613229e-07" ixz="2.2002252172126586e-06" />
         </inertial>
         <visual name="wrist1_link_visual">
+            <material name="white"/>
             <origin xyz="-0.028426107484972898 1.0011529867473e-05 -0.04023761155672658" rpy="0.9658415042822108 1.5678234077130215 0.9682829038963332" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/wrist1_link.stl" scale="0.001 0.001 0.001" />
@@ -265,6 +278,7 @@
             <inertia ixx="2.255021084705813e-05" iyy="3.8517110376837245e-05" izz="2.5284217858802952e-05" ixy="6.784004983037145e-06" iyz="1.284072419384474e-07" ixz="-3.3071849914539023e-07" />
         </inertial>
         <visual name="gripper_visual">
+            <material name="white"/>
             <origin xyz="6.812238235283986e-05 -4.067834789722724e-07 -0.040249938524923756" rpy="0.0016544108337975506 0.00035764457872715496 -1.7896483526330442" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/gripper.stl" scale="0.001 0.001 0.001" />
@@ -284,6 +298,7 @@
             <inertia ixx="8.624552117893875e-06" iyy="4.795833682344654e-06" izz="4.382623787586082e-06" ixy="-7.390389148708182e-07" iyz="-5.307881903484084e-07" ixz="-1.046428608201432e-07" />
         </inertial>
         <visual name="camera_mount_visual">
+            <material name="white"/>
             <origin xyz="-0.019570406927734575 -0.24492186184193013 0.014192661773020206" rpy="0.7902875010867846 1.5673407506794743 0.7861562540959603" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/camera_mount.stl" scale="0.001 0.001 0.001" />
@@ -303,6 +318,7 @@
             <inertia ixx="1.4109708078583983e-05" iyy="1.203732086380569e-05" izz="7.510508094662116e-06" ixy="-4.751224224735231e-09" iyz="6.990003640641876e-08" ixz="1.6823529448717078e-08" />
         </inertial>
         <visual name="shoulder_lift_actuator_visual">
+            <material name="black"/>
             <origin xyz="0.010276372105218652 -0.006412075749740908 -0.017179756791673963" rpy="0.3010460971466039 1.5682378005558886 0.29860356306546115" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/shoulder_lift_actuator.stl" scale="0.001 0.001 0.001" />
@@ -322,6 +338,7 @@
             <inertia ixx="7.510105797113868e-06" iyy="1.2037719279948435e-05" izz="1.4109711959989603e-05" ixy="-5.544515074684252e-08" iyz="3.853309119645942e-09" ixz="-1.6531118552274603e-08" />
         </inertial>
         <visual name="elbow_actuator_visual">
+            <material name="black"/>
             <origin xyz="-0.003540653748802356 -0.006374078860155893 0.010252185430398146" rpy="-0.0016848014948895118 -0.0024434595464297264 -0.002445314703120043" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/elbow_actuator.stl" scale="0.001 0.001 0.001" />
@@ -341,6 +358,7 @@
             <inertia ixx="7.510193329028582e-06" iyy="1.203763550274321e-05" izz="1.4109708205281308e-05" ixy="5.883814174599414e-08" iyz="-4.725979315666839e-09" ixz="1.679618607066552e-08" />
         </inertial>
         <visual name="wrist_1_actuator_visual">
+            <material name="black"/>
             <origin xyz="-0.003485719032433359 0.006368985168599932 0.010274148214570556" rpy="-3.1391432183315153 0.002439328896973042 0.001690776503720612" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/wrist_1_actuator.stl" scale="0.001 0.001 0.001" />
@@ -360,6 +378,7 @@
             <inertia ixx="1.2037639520681102e-05" iyy="7.51019268714799e-06" izz="1.4109704829221026e-05" ixy="-5.8892529968489725e-08" iyz="-1.652059954225657e-08" ixz="5.4039546175561876e-09" />
         </inertial>
         <visual name="wrist_2_actuator_visual">
+            <material name="black"/>
             <origin xyz="-0.025587058999740897 0.007181623686373453 0.010330143826798378" rpy="3.139153317375167 0.00244942797079852 -1.5691115252754138" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/wrist_2_actuator.stl" scale="0.001 0.001 0.001" />
@@ -379,6 +398,7 @@
             <inertia ixx="1.4109686324114237e-05" iyy="7.510758069406362e-06" izz="1.2037092643532064e-05" ixy="-1.689460783142574e-08" iyz="-7.755213590125534e-08" ixz="-8.274891926079823e-09" />
         </inertial>
         <visual name="finger_actuator_visual">
+            <material name="black"/>
             <origin xyz="-0.010284847372080321 -0.003459344924301089 -0.006366104550812879" rpy="1.5749305590399427 -0.0024453105374965495 1.5683547136914318" />
             <geometry>
                 <mesh filename="package://giraffe_description/meshes/finger_actuator.stl" scale="0.001 0.001 0.001" />
