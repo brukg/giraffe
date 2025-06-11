@@ -42,7 +42,9 @@ We redesigned the arm around cost-efficient Waveshare servos replacing Dynamixel
 
 ### Sourcing Parts
 
-Order the off the shelf parts for the arm using the links below.
+Order the off the shelf parts for the Leader and Follower arms using the Bill of Materials (BOM) below.
+
+#### Follower Arm BOM
 
 | Item Name | Quantity Per Arm | Unit Cost (incl GST) | Buy (India) |
 | --- | --- | --- | --- |
@@ -54,6 +56,8 @@ Order the off the shelf parts for the arm using the links below.
 | 12V 5A 60W Power Supply with 5.5mm DC Plug | 1 | ₹403.00 | [Robu.in](https://robu.in/product/orange-ac-100-240v-to-dc-12v-5a-60w-power-adapter/) |
 | M3 Nut | 4 | ₹1.00 | [Only Screws :P](https://onlyscrews.in/products/m3-nut-ss-304) |
 | M3x16 Bolt | 4 | ₹2.00 | [Only Screws :P](https://onlyscrews.in/products/hex-allen-csk-m3-x-16-screw-pack-of-20) |
+
+#### Leader Arm BOM
 
 | Item Name | Quantity Per Arm | Unit Cost (incl GST) | Buy (India) |
 | --- | --- | --- | --- |
