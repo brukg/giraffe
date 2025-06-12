@@ -16,15 +16,31 @@ A [Koch v1.1](https://github.com/jess-moss/koch-v1-1) inspired even more cost-ef
 
 To achieve these outcomes, we implemented the following significant changes:
 
-## **Servo Selection**
+For changes/features in the previous version of the Giraffe, see [Giraffe v1.0](https://github.com/carpit680/giraffe/tree/v1.0?tab=readme-ov-file#design-enhancements).
 
-We redesigned the arm around cost-efficient Waveshare servos replacing Dynamixel servos, effectively doubling the torque while reducing costs.
+
+<!-- START ANNOUNCEMENT -->
+<section align="center">
+
+## 🚀 OpenBot Community Launch! 🚀
+
+🌐 **[Visit our Website](https://openbot.co.in)**  
+📚 **[Read the Docs](https://docs.openbot.co.in)**  
+💬 **[Join us on Discord](https://openbot.co.in/discord)**  
+🛒 **[Get the Giraffe v1.1 Leader-Follower Set](https://www.openbot.co.in/#contact)**
+
+Build along with the community, follow our progress, and get your hands on the very latest OpenBot hardware!
+
+</section>
+<!-- END ANNOUNCEMENT -->
 
 ## **Design Enhancements**
 
-- Adjusted the base design to transfer the radial load from the base motor to the supporting structure, reducing motor stress.
-- Relocated the servo driver closer to the base for cleaner design.
-- The servo mounts were redesigned to utilize the fasteners provided with the servos, minimizing the required assembly components to just the servos, 3D-printed parts, and a screwdriver.
+- Adjusted overall design for strength and ease of printing with minimal post processing requirement.
+- Removable clamp base and Open Robotics Platform (ORP) mount for easy attachment to various robots.
+- Designed a new Leader arm around the AS5600 12-bit magnetic encoder, which provides the same resolution at about 1/10 the price of any other Leader arm available.
+- We have also designed a simple two layer PCB to replace the servo driver for Leader arm, there is always the option to build your own by hand on perf board. Schematics and Gerber files are available in the `/CAD/PCB/` directory.
+- The Leader arm now uses a Wemos D1 Mini v2 or any other ESP8266/32 based microcontroller and can potentially teleoperate wirelessly.
 
 - **[Teleop Tongs](https://github.com/carpit680/teleop_tongs) Integration**
 
@@ -40,9 +56,16 @@ We redesigned the arm around cost-efficient Waveshare servos replacing Dynamixel
 |----------------------------------|---------------------------------|
 | ![Giraffe Follower](assets/giraffe_follower.png) | ![Giraffe Leader](assets/giraffe_leader.png) |
 
+> NOTE: We use a different(Servo 2) AS5600 servo casings for the wrist 2 and the gripper finger joint in the Leader arm. This is optional but recommended for more stable readings.
+
+
+| Leader AS5600 encoder 1       | Leader AS5600 encoder 2         |
+|----------------------------------|---------------------------------|
+| ![Leader AS5600 servo 1](assets/as5600_servo_1.png) | ![Leader AS5600 servo 2](assets/as5600_servo_2.png) |
+
 ### Sourcing Parts
 
-Order the off the shelf parts for the Leader and Follower arms using the Bill of Materials (BOM) below.
+Order these off the shelf parts for the Leader and Follower arms using the Bill of Materials (BOM) below.
 
 #### Follower Arm BOM
 
