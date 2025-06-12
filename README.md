@@ -238,7 +238,7 @@ Follow the instructions given here to set up a ROS2 Docker development environme
    ```
 
 ## ROS2 Workspace Description
-[giraffe_moveit_sim.webm](https://github.com/user-attachments/assets/942947e6-a5ca-4b55-a39b-d64a580de182)
+[moveit_demo.webm](https://github.com/user-attachments/assets/742ece26-183e-449f-bbf9-ddf3f7e3e628)
 
 ### giraffe_description
 
