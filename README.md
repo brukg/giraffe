@@ -152,7 +152,7 @@ Construct the arms using this Assembly [Video](https://www.youtube.com/watch?v=8
 
 The assembled arms would look something like this:
 
-![Image of Giraffe leader and follower arms](assets/giraffe.png)
+![Image of Giraffe leader and follower arms](assets/giraffe_leader_follower.jpeg)
 
 ---
 
