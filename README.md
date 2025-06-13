@@ -99,7 +99,7 @@ A variety of 3D printers can be used to print the necessary parts for the arm. F
 
 #### 1. Select A Printer
 
-When choosing a printer, keep the following recommended specifications in mind. While other printers may work, these spececifications are a good starting point:
+When choosing a printer, keep the following recommended specifications in mind. While other printers may work, these specifications are a good starting point:
 
 - **Layer Height:** Minimum 0.2mm
 - **Material:** PLA+, ABS, PETG, or other durable plastics
@@ -133,7 +133,7 @@ Print one of each part found in `/CAD/STL/common/` and `/CAD/STL/follower/` or `
 | base                         | follower_base_retainer_left | as5600_servo_1              |
 | servo_driver_mount           | follower_base_retainer_right| as5600_servo_2              |
 | shoulder_pan                 | follower_clamp_base         | leader_clamp_base           |
-| soulder_pan_retainer         | follower_wrist_2            | leader_wrist_2              |
+| shoulder_pan_retainer         | follower_wrist_2            | leader_wrist_2              |
 | shoulder_pan_pin             | follower_gripper_finger     | leader_handle               |
 | shoulder_lift                |                             | leader_gripper_finger       |
 | elbow                        |                             |                             |
