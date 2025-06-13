@@ -148,7 +148,7 @@ Print one of each part found in `/CAD/STL/common/` and `/CAD/STL/follower/` or `
 
 ### Assembling The Parts
 
-Construct the arms using this Assembly [Video](https://www.youtube.com/watch?v=8nQIg9BwwTk&t=8m20s) (Note: Follow the assembly instructions provided for Follower Arm starting at 08:20 of the video). After you assemble the arms from the video, power the arm using the 12V power supply. In addition, plug the arm into your computer using a USB-C cable.
+Follow the assembly guide given in the [OpenBot Docs](https://docs.openbot.co.in/docs/Giraffe/giraffe_intro) to assemble the parts. The assembly process is similar for both the Leader and Follower arms, with some differences in the Leader arm due to the AS5600 encoders and the Wemos D1 Mini.
 
 The assembled arms would look something like this:
 
