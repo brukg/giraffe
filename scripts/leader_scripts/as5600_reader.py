@@ -3,21 +3,61 @@ import os
 import serial
 import collections
 import numpy as np
+import time
+from pathlib import Path
+from serial.tools import list_ports
 
 from leader_calibration import CalibrationDataGenerator
+
+def find_available_ports():
+    if os.name == "nt":  # Windows
+        # List COM ports using pyserial
+        ports = [port.device for port in list_ports.comports()]
+    else:  # Linux/macOS
+        # List /dev/tty* ports for Unix-based systems
+        ports = [str(path) for path in Path("/dev").glob("tty*")]
+    return ports
+
+def find_port():
+    print("Finding all available ports for the MotorsBus.")
+    ports_before = find_available_ports()
+    print("Detected all ports before disconnection.")
+    print("Remove the USB cable from your system and press Enter when done.")
+    input()  # Wait for user to disconnect the device
+
+    time.sleep(0.5)  # Allow some time for port to be released
+    ports_after = find_available_ports()
+    ports_diff = list(set(ports_before) - set(ports_after))
+
+    if len(ports_diff) == 1:
+        port = ports_diff[0]
+        print(f"The port for the leader arm is '{port}'")
+        with open("leader_port.txt", "w") as f:
+            f.write(port + "\n")
+        print("Saved port to leader_port.txt")
+
+        print("Reconnect the USB cable.")
+        input("Press Enter when done to continue...")  # Wait for user to reconnect the device
+        time.sleep(0.5)  # Allow some time for port to be re-established
+        print("Port detection complete. You can now run the AS5600 sensor script.")
+        # Save to file
+    elif len(ports_diff) == 0:
+        raise OSError(f"Could not detect the port. No difference was found ({ports_diff}).")
+    else:
+        raise OSError(f"Could not detect the port. More than one port was found ({ports_diff}).")
 
 # === Get port from leader_port.txt ===
 PORT_FILE = "leader_port.txt"
 if not os.path.exists(PORT_FILE):
-    raise FileNotFoundError(
-        "leader_port.txt not found. Please run find_leader_port.py first to detect the port."
+    print(
+        "leader_port.txt not found. Finding port and saving to file."
     )
+    find_port()
 
 with open(PORT_FILE, "r") as f:
     LEADER_PORT = f.readline().strip()
 
 def signed_delta(raw, ref):
-    # Return (raw − ref) in [−2048, +2048]
     return ((raw - ref + 2048) % 4096) - 2048
 
 class AS5600Sensor:
@@ -109,7 +149,6 @@ class AS5600Sensor:
                     median_filtered_angles[4],
                     gripper_value
                 ]
-                print(self.dummy_angles[:5], abs(median_filtered_angles[5]))
                 return self.dummy_angles
         except Exception as e:
             print(f"Error from AS5600: {e}")
